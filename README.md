@@ -8,6 +8,16 @@ The goal is to build a classification model that predicts the variable **`y`** (
 
 ---
 
+## Dataset Description
+
+This project uses the **Bank Marketing Dataset** from the UCI Machine Learning Repository. The dataset contains information from direct marketing campaigns conducted by a Portuguese banking institution, where clients were contacted by phone to promote term deposit subscriptions.
+
+The dataset includes **4,119 client records** and **20 input features** describing client demographics, financial status, previous marketing interactions, and macroeconomic conditions. The target variable, **`y`**, indicates whether a client subscribed to a term deposit (`yes` or `no`).
+
+The goal is to build and evaluate classification models that predict the likelihood of a client subscribing to the offered banking product.
+
+---
+
 ## 📁 Project Structure
 
 ```
@@ -36,9 +46,9 @@ bank-marketing-classification/
 
 ## 🤖 Models Used
 
-* Logistic Regression (baseline)
-* Random Forest Classifier
-* Gradient Boosting (optional)
+* Decision Tree (baseline)
+* Support Vector Machine
+* Other (optional)
 
 ---
 
@@ -59,7 +69,7 @@ Models are evaluated using:
 1. Clone the repository:
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/heleneInsights/bank-marketing-classification.git
 cd bank-marketing-classification
 ```
 
