@@ -6,3 +6,8 @@ scikit-learn
 matplotlib
 seaborn
 jupyter
+XGBoost
+LightGBM
+JobLib
+LazyPredict
+Optuna

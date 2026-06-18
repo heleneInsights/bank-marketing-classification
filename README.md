@@ -18,6 +18,68 @@ The goal is to build and evaluate classification models that predict the likelih
 
 ---
 
+Good idea — this is exactly what makes the project look complete and professional.
+
+Here’s a **clean, concise README “Results” section** you can paste directly:
+
+---
+
+# 📊 Results
+
+## 🏆 Final Model Performance (Optimized XGBoost)
+
+The final selected model was an optimized **XGBoost Classifier**, trained using a full preprocessing pipeline and tuned with Optuna.
+
+### Overall performance:
+
+* **Accuracy:** 0.894
+* **ROC-AUC:** 0.9337
+* **F1 Macro:** 0.7727
+* **F1 Weighted:** 0.9025
+
+---
+
+## 🎯 Class-level performance
+
+| Class                | Precision | Recall | F1-score |
+| -------------------- | --------- | ------ | -------- |
+| No Subscription (0)  | 0.97      | 0.91   | 0.94     |
+| Yes Subscription (1) | 0.51      | 0.75   | 0.61     |
+
+---
+
+## 📈 Key insights
+
+* The model achieves **strong separation capability** between classes (ROC-AUC = 0.93).
+* It significantly improves detection of potential subscribers, reaching **75% recall for Class 1**.
+* Performance prioritizes **recall over precision**, aligning with a marketing use case where identifying potential customers is more important than minimizing false positives.
+
+---
+
+## 🧠 Business impact
+
+* Enables prioritization of high-probability clients for targeted campaigns.
+* Improves marketing efficiency by focusing resources on likely converters.
+* Supports data-driven decision-making in customer outreach strategies.
+
+---
+
+## 📦 Model artifacts
+
+The final model is saved as a complete pipeline, including preprocessing and the trained classifier:
+
+```
+models/xgb_optimized_pipeline.joblib
+```
+
+---
+
+## 🚀 Summary
+
+The optimized XGBoost model provides a strong balance between predictive performance and business utility, making it suitable for deployment in customer targeting and campaign optimization systems.
+
+---
+
 ## 📁 Project Structure
 
 ```
@@ -48,7 +110,7 @@ bank-marketing-classification/
 
 * Decision Tree (baseline)
 * Support Vector Machine
-* Other (optional)
+* XGBoost
 
 ---
 
@@ -93,7 +155,7 @@ pip install -r requirements.txt
 
 ## 📌 Status
 
-Project in progress — final version includes model comparison and evaluation.
+Project completed — end-to-end workflow including data cleaning, exploratory data analysis, feature engineering, hyperparameter tuning, and model evaluation with multiple classifiers.
 
 ---
 
@@ -101,6 +163,8 @@ Project in progress — final version includes model comparison and evaluation.
 - Analysis is exploratory and descriptive in nature
 - Further segmentation and statistical testing could enhance insights
 - Some patterns may require deeper domain-specific analysis
+- Due to time and computational constraints, the project was developed using a minimal subset of the available data
+- Increasing the amount of data in future iterations could further improve model performance and the robustness of the insights
 
 ---
 
@@ -112,12 +176,16 @@ heleneInsights
 
 ## 🛠️ Technologies Used
 
-* Python
-* Pandas
-* NumPy
-* Scikit-Learn
-* Plotly
-* Matplotlib
-* SciPy
-* LazyPredict
-* Jupyter Notebook
+- Python
+- Pandas
+- NumPy
+- Scikit-Learn
+- Plotly
+- Matplotlib
+- SciPy
+- XGBoost
+- LightGBM
+- JobLib
+- LazyPredict
+- Optuna
+- Jupyter Notebook
